@@ -6,7 +6,7 @@ def ispan(str):
             return False
     return True
 
-str = 'aaaaaaaaaaaaaaaaaaaaaaaaaa'
+str = 'aaaaaaaaaaaaaaaaaaaaaaaaaa' # The quick brown fox jumps over the lazy dog
 print(len(str))
 if(ispan(str) == True):
     print("yes")
