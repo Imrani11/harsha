@@ -10,24 +10,21 @@ Do not allocate extra space for another array. You must do this by modifying the
 
 
 def deleteElement(arr, n, x):
-    for i in range(n):
-        if (arr[i] == x):
-            break
+    for i in arr:
+        if x in arr:
+            arr.remove(x)
+
     if (i < n):
         n = n - 1
         for j in range(i, n, 1):
+            print(j)
             arr[j] = arr[j + 1]
     return n
 if __name__ == '__main__':
-    arr = [11, 15, 6, 8, 10]
+    arr = [25,5,5,5,5,63,25]
     n = len(arr)
-    x = 6
+    x = 5
     n = deleteElement(arr, n, x)
-
     print("Modified array is")
-    for i in range(n):
-        # if arr[i] == x:
-        #     del arr[i]
-        print(arr[i], end=" ")
-
-
+    for i in arr:
+        print(i, end=" ")
