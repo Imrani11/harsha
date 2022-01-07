@@ -8,7 +8,7 @@ Each of them contains the following fields: data —
 The decoded string in bytes. You need to decode it using utf8 to get a string. 
 type — Only useful for barcodes as it outlines the barcode format
 '''
-data = 'Never Give Up'
+data = 'G://Qrcode//images'
 qr = qrcode.QRCode(version=1, box_size=10, border=5)
 qr.add_data(data)
 qr.make()
