@@ -14,7 +14,7 @@ import sys
 
 def possibleChanges(usernames):
     ans = []
-    for u in usernames:
+    for u in usernames: # looping the username here
         if len(u) <= 1:
             ans.append("NO")
         for i in range(len(u) - 1):
@@ -26,20 +26,21 @@ def possibleChanges(usernames):
     return ans
 
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+#if __name__ == '__main__':
+#    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    usernames_count = int(input().strip())
+usernames_count = int(input("Enter the username count here:").strip())
 
-    usernames = []
+usernames = [] # Empty list and append the username_items
 
-    for _ in range(usernames_count):
-        usernames_item = input()
-        usernames.append(usernames_item)
+for _ in range(usernames_count):
+    usernames_item = input("Enter the username here:")
+    usernames.append(usernames_item)
 
-    result = possibleChanges(usernames)
+    result = possibleChanges(usernames) # calling the function
+    print(result) # print the result
 
-    fptr.write('\n'.join(result))
-    fptr.write('\n')
+#    fptr.write('\n'.join(result))
+#    fptr.write('\n')
 
-    fptr.close()
+#    fptr.close()
